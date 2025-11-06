@@ -124,11 +124,17 @@ Complete the struct called `Game` that implements the `NmmGame` trait. All funct
 the trait should be implemented.
 */
 
-pub struct Game {/* add your fields here */}
+pub struct Game {/* add your fields here */
+    playerWhite: Player,
+    playerBlack: Player
+
+}
+
 
 impl NmmGame for Game {
     fn new() -> Self {
-        unimplemented!()
+//        unimplemented!()
+        Game { playerWhite: (Color::White), playerBlack: (Color::Black) }
     }
 
     fn action(&mut self, _action: Action) -> Result<(), &'static str> {
