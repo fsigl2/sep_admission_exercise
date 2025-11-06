@@ -126,7 +126,8 @@ the trait should be implemented.
 
 pub struct Game {/* add your fields here */
     playerWhite: Player,
-    playerBlack: Player
+    playerBlack: Player,
+    board: Vec<(Point, Option<Piece>)>
 
 }
 
@@ -134,7 +135,11 @@ pub struct Game {/* add your fields here */
 impl NmmGame for Game {
     fn new() -> Self {
 //        unimplemented!()
-        Game { playerWhite: (Color::White), playerBlack: (Color::Black) }
+        Game { 
+            playerWhite: (Color::White),
+            playerBlack: (Color::Black),
+            board: (0..24).map(|n| (n, None)).collect()
+        }
     }
 
     fn action(&mut self, _action: Action) -> Result<(), &'static str> {

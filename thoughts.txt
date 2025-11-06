@@ -1,0 +1,5 @@
+make vector of (Point|Option<piece>) tupels
+vector of white pieces
+vector of black pieces
+
+take pieces out -> put into tupel vector
